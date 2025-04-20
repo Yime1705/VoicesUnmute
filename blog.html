@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VoiceUnmuted | Blog</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #eef1f5, #f9f9ff);
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      padding: 1rem 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #222;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #edf1fc;
+      color: #111;
+    }
+
+    main {
+      padding-top: 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      margin-bottom: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      color: #111827;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      color: #4b5563;
+      font-size: 1rem;
+    }
+
+    .blog-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 1rem;
+    }
+
+    .blog-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #1f2937;
+    }
+
+    .blog-content p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      line-height: 1.5;
+    }
+
+    .blog-footer {
+      margin-top: auto;
+      padding: 0 1rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+    <header>
+        <a href="/index.html"><div class="logo">VoiceUnmuted</div></a>
+        <nav>
+            <a href="/signin.html"> Sign In</a>
+            <a href="/blog.html">The Frontlines</a>
+            <a href="/teel.html"> Tell Your Story</a>
+            <a href="/forum.html"> The Forum</a>
+            <a href="/frontline.html"> Support</a>
+            <a href="/archives.html"> Archives</a>
+        </nav>
+      </header>
+    
+  <main>
+    <section class="hero">
+      <h2>Stories from the Frontlines</h2>
+      <p>Unfiltered blog entries from people in war zones and oppressed communities. Witness truth through their eyes.</p>
+    </section>
+
+    <section class="blog-section">
+      <div class="blog-card">
+        <img src="/image/1626364b5818f4a288a1310ed7da57ccf73ffc95-2560x1060.avif" alt="Gaza Image">
+        <div class="blog-content">
+          <h3>Witnessing Gaza: A Photographer’s Last Project</h3>
+          <p>A final series of photos from a journalist who risked it all to reveal the human cost of war. These images show not just destruction, but resilience.</p>
+        </div>
+        <div class="blog-footer">
+          <span>24 Oct 2021</span>
+          <span>VoiceUnmuted</span>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="/image/33XL6CD-highres-1703444163.webp" alt="Smuggled Files Image">
+        <div class="blog-content">
+          <h3>Smuggled Files: What the World Wasn't Meant to See</h3>
+          <p>Hidden messages and photos that expose untold realities of an oppressed population. This is the truth echoing from the shadows.</p>
+        </div>
+        <div class="blog-footer">
+          <span>24 Oct 2021</span>
+          <span>VoiceUnmuted</span>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="/image/4T5MKRFTU5PALLIUWPCCDUVVZM.avif" alt="Generic War Image">
+        <div class="blog-content">
+          <h3>Echoes from the Rubble</h3>
+          <p>Even in silence, the ruins speak. A child’s drawing found in a shattered classroom tells more than a thousand news reports ever could.</p>
+        </div>
+        <div class="blog-footer">
+          <span>23 Oct 2021</span>
+          <span>VoiceUnmuted</span>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="/image/image1.webp" alt="Voices of Hope">
+        <div class="blog-content">
+          <h3>Voices of Hope</h3>
+          <p>Captured interviews with women building support networks after losing everything to violence and displacement.</p>
+        </div>
+        <div class="blog-footer">
+          <span>22 Oct 2021</span>
+          <span>VoiceUnmuted</span>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="/image/israel-122029388-16x9.webp" alt="Underground Network">
+        <div class="blog-content">
+          <h3>Underground Network</h3>
+          <p>How brave youth created secret media channels to broadcast truth under authoritarian rule.</p>
+        </div>
+        <div class="blog-footer">
+          <span>21 Oct 2021</span>
+          <span>VoiceUnmuted</span>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="/image/Israel-Palestine-700x30.jpg" alt="Letters Home">
+        <div class="blog-content">
+          <h3>Letters Home</h3>
+          <p>Heartfelt messages smuggled from war zones that show love never stops, even during the darkest times.</p>
+        </div>
+        <div class="blog-footer">
+          <span>20 Oct 2021</span>
+          <span>VoiceUnmuted</span>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="/image/Lede.webp" alt="Children and Conflict">
+        <div class="blog-content">
+          <h3>Children and Conflict</h3>
+          <p>Photos and stories from schools turned to shelters, where education still fights to survive.</p>
+        </div>
+        <div class="blog-footer">
+          <span>19 Oct 2021</span>
+          <span>VoiceUnmuted</span>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="/image/RTSORJ0J(V2).jpg.webp" alt="Digital Resistance">
+        <div class="blog-content">
+          <h3>Digital Resistance</h3>
+          <p>How social media became the battlefield to counter misinformation and spread raw, uncensored truths.</p>
+        </div>
+        <div class="blog-footer">
+          <span>18 Oct 2021</span>
+          <span>VoiceUnmuted</span>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="/image/world_000_99t4qm.webp" alt="The Last Broadcast">
+        <div class="blog-content">
+          <h3>The Last Broadcast</h3>
+          <p>A radio station that continued airing through bombings until its final signal echoed freedom one last time.</p>
+        </div>
+        <div class="blog-footer">
+          <span>17 Oct 2021</span>
+          <span>VoiceUnmuted</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoiceUnmuted – Unfiltered Truth</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #eef1f5, #f9f9ff);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #222;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #edf1fc;
+      color: #111;
+    }
+
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .left {
+      flex: 1;
+      padding: 4rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #f0f4ff;
+    }
+
+    .left h1 {
+      font-size: 3rem;
+      color: #333;
+    }
+
+    .left p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: #666;
+      max-width: 500px;
+    }
+
+    .right {
+      flex: 1;
+      overflow: hidden;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    .scroll-container {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .stories-track {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      animation: scrollUp 30s linear infinite;
+    }
+
+    .story-card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      background: white;
+    }
+
+    .story-card:hover {
+      transform: scale(1.02);
+    }
+
+    .story-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .story-card h3 {
+      font-size: 1rem;
+      padding: 1rem;
+      color: #222;
+    }
+    a {
+  text-decoration: none;
+  color: inherit; /* Optional: makes the link match the surrounding text color */
+}
+
+    @keyframes scrollUp {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    @media(max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+      .left, .right {
+        flex: unset;
+        height: auto;
+        padding: 2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <a href="/index.html"><div class="logo">VoiceUnmuted</div></a>
+        <nav>
+            <a href="/signin.html"> Sign In</a>
+            <a href="/blog.html">The Frontlines</a>
+            <a href="/teel.html"> Tell Your Story</a>
+            <a href="/forum.html"> The Forum</a>
+            <a href="/frontline.html"> Support</a>
+            <a href="/archives.html"> Archives</a>
+        </nav>
+      </header>
+    
+
+  <div class="main">
+    <div class="left">
+      <h1>VoiceUnmuted</h1>
+      <p>Browse unfiltered stories from conflict zones, and help amplify the voices that refuse to be silenced.</p>
+    </div>
+
+    <div class="right">
+      <div class="scroll-container">
+        <div class="stories-track">
+          <!-- Set 1 -->
+          <a href="/article1.html" class="story-card">
+            <img src="/image/image1.webp" alt="Story 1">
+            <h3>Witnessing Gaza: A Photographer’s Last Project</h3>
+          </a>
+          <a href="/article2.html" class="story-card">
+            <img src="/image/Israel-Palestine-700x300.jpg" alt="Story 2">
+            <h3>Smuggled Files: What the World Wasn’t Meant to See</h3>
+          </a>
+          <a href="/article3.html" class="story-card">
+            <img src="/image/Israel-Palestine-700x30.jpg" alt="Story 3">
+            <h3>Voices from the Rubble: Civilian Diaries</h3>
+          </a>
+          <a href="/article4.html" class="story-card">
+            <img src="/image/thumbs_b_c_baba7c955b89398801b68177bce2cc6a.jpg" alt="Story 4">
+            <h3>Unmuted: Stories That Escaped the Firewall</h3>
+          </a>
+          <!-- Set 2 -->
+          <a href="/article1.html" class="story-card">
+            <img src="/image/1626364b5818f4a288a1310ed7da57ccf73ffc95-2560x1060.avif" alt="Story 1">
+            <h3>Witnessing Gaza: A Photographer’s Last Project</h3>
+          </a>
+          <a href="/article2.html" class="story-card">
+            <img src="/image/Lede.webp" alt="Story 2">
+            <h3>Smuggled Files: What the World Wasn’t Meant to See</h3>
+          </a>
+          <a href="/article3.html" class="story-card">
+            <img src="/image/33XL6CD-highres-1703444163.webp" alt="Story 3">
+            <h3>Voices from the Rubble: Civilian Diaries</h3>
+          </a>
+          <a href="/article4.html" class="story-card">
+            <img src="/image/world_000_99t4qm.webp" alt="Story 4">
+            <h3>Unmuted: Stories That Escaped the Firewall</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

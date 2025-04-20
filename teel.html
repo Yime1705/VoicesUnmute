@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VoiceUnmuted | Tell Your Story</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #eef1f5, #f9f9ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      padding: 1rem 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #222;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #edf1fc;
+      color: #111;
+    }
+
+    .story-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+      margin-top: 100px; /* Adjust to account for fixed header */
+    }
+
+    .story-container h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #111827;
+      margin-bottom: 1rem;
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: #4CAF50;
+    }
+
+    .form-textarea {
+      height: 200px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    .upload-container {
+      margin-top: 1rem;
+    }
+
+    .upload-container input[type="file"] {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .upload-container label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #333;
+    }
+    a{
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+
+  
+    <header>
+        <a href="/index.html"><div class="logo">VoiceUnmuted</div></a>
+        <nav>
+            <a href="/signin.html"> Sign In</a>
+            <a href="/blog.html">The Frontlines</a>
+            <a href="/teel.html"> Tell Your Story</a>
+            <a href="/forum.html"> The Forum</a>
+            <a href="/frontline.html"> Support</a>
+            <a href="/archives.html"> Archives</a>
+        </nav>
+      </header>
+    
+
+
+  <div class="story-container">
+    <h2>Share Your Story</h2>
+    <form action="/submit-story" method="POST">
+      <input type="text" name="title" placeholder="Story Title" class="form-input" required />
+      
+      <textarea name="storyContent" placeholder="Write your story here..." class="form-textarea" required></textarea>
+
+      <div class="upload-container">
+        <label for="storyImage">Upload Image (Optional)</label>
+        <input type="file" name="storyImage" id="storyImage" accept="image/*">
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Your Story</button>
+    </form>
+  </div>
+
+</body>
+</html>

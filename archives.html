@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EchoHaven | Archives</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #1f1f1f, #121212);
+      color: #f0f0f0;
+      overflow-y: auto;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #f9f9f9;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #cccccc;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #2c2c2c;
+      color: #ffffff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem;
+      background: #181818;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #e5e7eb;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      color: #9ca3af;
+      font-size: 1.1rem;
+    }
+
+    .archive-section {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .person-card {
+      background-color: #262626;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .person-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    .person-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 2px solid #3f3f3f;
+    }
+
+    .person-card h3 {
+      font-size: 1.1rem;
+      color: #f3f4f6;
+    }
+
+    .person-card p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  
+  <header>
+    <a href="/index.html"><div class="logo">VoiceUnmuted</div></a>
+    <nav>
+        <a href="/signin.html"> Sign In</a>
+        <a href="/blog.html">The Frontlines</a>
+        <a href="/teel.html"> Tell Your Story</a>
+        <a href="/forum.html"> The Forum</a>
+        <a href="/frontline.html"> Support</a>
+        <a href="/archives.html"> Archives</a>
+    </nav>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>In Memory: The Archives</h2>
+    <p>the world might have forgotten then but we have not</p>
+  </section>
+
+  <!-- Archive Cards -->
+  <section class="archive-section">
+    <div class="person-card">
+      <img src="/image/New folder/FotoJet-61.jpg" alt="Anas Al-Sharif">
+      <h3>Amal Al-Sharif</h3>
+      <p>1994 – 2023</p>
+    </div>
+
+    <div class="person-card">
+      <img src="/image/New folder/p05tkssf.jpg" alt="Hassan Najeeb">
+      <h3>Zainab Ansari</h3>
+      <p>2010 - 2018</p>
+    </div>
+
+    <div class="person-card">
+      <img src="/image/New folder/noormukadam.jpg" alt="Sahar Khalid">
+      <h3>Noor Mukadam</h3>
+      <p>1993 – 2021</p>
+    </div>
+
+    <div class="person-card">
+      <img src="/image/New folder/parachinar.jpg" alt="Muhammad Tareq">
+      <h3>Parachinar</h3>
+      <p>2024</p>
+    </div>
+
+    <div class="person-card">
+      <img src="/image/New folder/palestine.jpg" alt="Laila Farooq">
+      <h3>Palestine</h3>
+      <p>2023</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=I" alt="Ibrahim Musa">
+      <h3>Ibrahim Musa</h3>
+      <p>1990 – 2022</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=N" alt="Noor Zainab">
+      <h3>Noor Zainab</h3>
+      <p>1998 – 2023</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=F" alt="Fatima Jawad">
+      <h3>Fatima Jawad</h3>
+      <p>1995 – 2023</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=R" alt="Rami Abdallah">
+      <h3>Rami Abdallah</h3>
+      <p>1980 – 2020</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=K" alt="Khadija Mahir">
+      <h3>Khadija Mahir</h3>
+      <p>1985 – 2023</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=Z" alt="Zayd Rahim">
+      <h3>Zayd Rahim</h3>
+      <p>2000 – 2022</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=T" alt="Tariq El-Amin">
+      <h3>Tariq El-Amin</h3>
+      <p>1993 – 2023</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=A" alt="Asma Sultan">
+      <h3>Asma Sultan</h3>
+      <p>1970 – 2019</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=W" alt="Waleed Basit">
+      <h3>Waleed Basit</h3>
+      <p>1982 – 2023</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=E" alt="Esra Hamdan">
+      <h3>Esra Hamdan</h3>
+      <p>2003 – 2023</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=J" alt="Jamal Idris">
+      <h3>Jamal Idris</h3>
+      <p>1996 – 2022</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=D" alt="Dalia Noor">
+      <h3>Dalia Noor</h3>
+      <p>1991 – 2023</p>
+    </div>
+
+    <div class="person-card">
+      <img src="https://via.placeholder.com/120?text=N" alt="Naseer Uddin">
+      <h3>Naseer Uddin</h3>
+      <p>1965 – 2020</p>
+    </div>
+  </section>
+
+</body>
+</html>

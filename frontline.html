@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support VoiceUnmuted</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #eef2f5, #fdfdfd);
+      color: #1f2937;
+    }
+
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #111;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #e0e7ff;
+    }
+
+    .hero {
+      margin-top: 90px;
+      padding: 3rem 2rem;
+      background: #f1f5f9;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .hero button {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      background-color: #2563eb;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .donation-form-section {
+      padding: 3rem 2rem;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .donation-form-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    form input, form select, form button {
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #10b981;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #059669;
+    }
+
+    .amount-raised {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .amount-raised h3 {
+      font-size: 2rem;
+      color: #16a34a;
+    }
+
+    .carousel-section {
+      padding: 3rem 2rem;
+      background-color: #f9fafb;
+    }
+
+    .carousel-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .story-card {
+      background: white;
+      border-radius: 12px;
+      min-width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+
+    .story-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .story-card p {
+      padding: 1rem;
+      font-size: 1rem;
+      color: #374151;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    @media (max-width: 500px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .carousel {
+        padding-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+
+  <header>
+    <a href="/index.html"><div class="logo">VoiceUnmuted</div></a>
+    <nav>
+        <a href="/signin.html"> Sign In</a>
+        <a href="/blog.html">The Frontlines</a>
+        <a href="/teel.html"> Tell Your Story</a>
+        <a href="/forum.html"> The Forum</a>
+        <a href="/frontline.html"> Support</a>
+        <a href="/archives.html"> Archives</a>
+    </nav>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Support VoiceUnmuted</h1>
+      <p>Your donation helps us amplify voices from the frontlines.</p>
+      <button onclick="document.getElementById('donation-form').scrollIntoView({behavior: 'smooth'})">Donate Now</button>
+    </div>
+  </section>
+
+  <!-- Donation Form -->
+  <section class="donation-form-section" id="donation-form">
+    <h2>Make a Donation</h2>
+    <form id="form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="number" placeholder="Amount ($)" required />
+      <select required>
+        <option disabled selected>Select Payment Method</option>
+        <option value="credit">Credit Card</option>
+        <option value="paypal">PayPal</option>
+      </select>
+      <button type="submit">Submit Donation</button>
+    </form>
+
+    <div class="amount-raised">
+      <p>Raised so far:</p>
+      <h3>$250,027</h3>
+    </div>
+  </section>
+
+  <!-- Impact Stories Carousel -->
+  <section class="carousel-section">
+    <h2>How Your Donations Help</h2>
+    <div class="carousel" id="story-carousel">
+      <div class="story-card">
+        <img src="/image/don.jpg" alt="Gaza support">
+        <p>💬 "$500 funded photojournalism in Gaza."</p>
+      </div>
+      <div class="story-card">
+        <img src="/image/33XL6CD-highres-1703444163.webp" alt="Camera funding">
+        <p>📸 "$1200 bought cameras for frontline reporting."</p>
+      </div>
+      <div class="story-card">
+        <img src="/image/41_2024-638537228010490059-49.jpg" alt="Syria stories">
+        <p>🌍 "Your support helped publish stories from Syria."</p>
+      </div>
+      <div class="story-card">
+        <img src="/image/ccf3e2f326e9bf45b97faf05c76d6c41c26992e87528e0196bec5eeb218124b8.avif" alt="Safe travel">
+        <p>📝 "$700 enabled a truth-seeker to travel safely."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional JavaScript to show confirmation -->
+  <script>
+    document.getElementById('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for supporting VoiceUnmuted!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

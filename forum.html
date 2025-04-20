@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VoiceUnmuted | Forum</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #eef1f5, #f9f9ff);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #222;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #edf1fc;
+      color: #111;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem;
+      background: #ffffff;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      color: #111827;
+    }
+
+    .forum-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .forum-main {
+      flex: 3;
+    }
+
+    .forum-sidebar {
+      flex: 1;
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .forum-sidebar h3 {
+      font-size: 1.2rem;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    .forum-thread {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .forum-thread:hover {
+      transform: translateY(-5px);
+    }
+
+    .forum-thread .thread-header {
+      padding: 1rem;
+      background-color: #edf1fc;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .forum-thread .thread-header h3 {
+      font-size: 1.2rem;
+      color: #111827;
+    }
+
+    .forum-thread .thread-header p {
+      font-size: 1rem;
+      color: #6b7280;
+    }
+
+    .forum-thread .thread-footer {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .forum-thread .thread-footer .post-count {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .forum-sidebar .sidebar-link {
+      display: block;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      background-color: #f3f4f6;
+      color: #111827;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .forum-sidebar .sidebar-link:hover {
+      background-color: #edf1fc;
+    }
+
+    .create-thread-btn {
+      text-decoration: none;
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    .create-thread-btn:hover {
+      background-color: #45a049;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .forum-container {
+        flex-direction: column;
+      }
+
+      .forum-sidebar {
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+    <header>
+        <a href="/index.html"><div class="logo">VoiceUnmuted</div></a>
+        <nav>
+            <a href="/signin.html"> Sign In</a>
+            <a href="/blog.html">The Frontlines</a>
+            <a href="/teel.html"> Tell Your Story</a>
+            <a href="/forum.html"> The Forum</a>
+            <a href="/frontline.html"> Support</a>
+            <a href="/archives.html"> Archives</a>
+        </nav>
+      </header>
+    
+
+  <section class="hero">
+    <h2>VoiceUnmuted Forum</h2>
+    <p>Join the conversation. Discuss, share, and learn from others in the community.</p>
+  </section>
+
+  <section class="forum-container">
+    <div class="forum-main">
+      <div class="forum-thread">
+        <div class="thread-header">
+          <h3>The Future of Journalism in War Zones</h3>
+          <p>Discuss the role of journalism in conflict areas and how the media shapes public perception.</p>
+        </div>
+        <div class="thread-footer">
+          <span>Started by VoiceUnmuted</span>
+          <span class="post-count">15 Responses</span>
+        </div>
+      </div>
+
+      <div class="forum-thread">
+        <div class="thread-header">
+          <h3>Humanitarian Aid: Successes and Failures</h3>
+          <p>A critical look at how aid organizations have helped or hindered populations in conflict zones.</p>
+        </div>
+        <div class="thread-footer">
+          <span>Started by VoiceUnmuted</span>
+          <span class="post-count">8 Responses</span>
+        </div>
+      </div>
+
+      <div class="forum-thread">
+        <div class="thread-header">
+          <h3>The Impact of Digital Resistance in Authoritarian Regimes</h3>
+          <p>Discuss how digital activism is changing the way people fight against authoritarian governments.</p>
+        </div>
+        <div class="thread-footer">
+          <span>Started by VoiceUnmuted</span>
+          <span class="post-count">5 Responses</span>
+        </div>
+      </div>
+
+      <!-- Add more threads as needed -->
+
+    </div>
+
+    <div class="forum-sidebar">
+      <h3>Forum Categories</h3>
+      <a href="#" class="sidebar-link">General Discussion</a>
+      <a href="#" class="sidebar-link">War and Peace</a>
+      <a href="#" class="sidebar-link">Humanitarian Aid</a>
+      <a href="#" class="sidebar-link">Digital Resistance</a>
+      <a href="#" class="sidebar-link">Personal Stories</a>
+
+      <a href="/submit.html" class="create-thread-btn" title="Start a New Thread">
+        + Start a New Thread
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
